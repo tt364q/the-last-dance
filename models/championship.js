@@ -6,11 +6,12 @@ const Schema = mongoose.Schema;
 
 //create a championshipSchema
 const championshipSchema = new Schema( {
-    title: {
-        type: String,
-        required: true
-    },
-    body: String
+    titleYear: Number,
+    shoes: String,
+    ppg: Number,
+    apg: Number,
+    rpg: Number,
+    opponent: String,
 }, { timestamps: true });
 
 module.exports = mongoose.model('championship', championshipSchema);

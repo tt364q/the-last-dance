@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Championships</title>
+</head>
+<body>
+    <h1>Championships</h1>
+    <a href="/">Go Back Home</a>
+    <a href="/championships/memories">Favorite Michael Jordan Memory</a>
+    <table>
+        <thead>
+            <tr>
+                <th>Title Year</th>
+                <th>Shoes</th>
+                <th>PPG</th>
+                <th>RPG</th>
+                <th>APG</th>
+                <th>Opponent</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% championships.forEach(function(championship){ %>
+
+                    <tr>
+                        <td>
+                            <%= championship.titleYear %>
+                        </td>
+                        <td>
+                            <%= championship.shoes %>
+                        </td>
+                        <td>
+                            <%= championship.ppg %>
+                        </td>
+                        <td>
+                            <%= championship.rpg %>
+                        </td>
+                        <td>
+                            <%= championship.apg %>
+                        </td>
+                        <td>
+                            <%= championship.opponent %>
+                        </td>
+                    </tr>
+               <% }); %>
+        </tbody>
+    </table>
+</body>
+</html>

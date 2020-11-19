@@ -1,4 +1,3 @@
-const championship = require('../models/championship');
 const Championship = require('../models/championship');
 
 
@@ -7,19 +6,25 @@ require('../config/database');
 
 
 
+function create(req, res){
+    Championship.create(req.body, function(err, championship){
+        res.redirect('/championships')
+    });
+}
 
-
-championship.find({}, function(err, championships){
-   if(err) {
-       console.log(err)
-   } else {
-       console.log(championships);
-   }
-})
-
+function index(req, res){
+    Championship.find({}, function(err, championships){
+        res.render('championships/index', { championships })
+    });
+}
+function memories(req, res) {
+    res.render('championships/memories');
+}
 
 
 
 module.exports = {
-
-}
+    index,
+    memories,
+    create
+};

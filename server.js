@@ -6,6 +6,8 @@ const port = 3000;
 
 //require router modules
 const indexRouter = require('./routes/index');
+const championshipsRouter = require('./routes/championships');
+const memoriesRouter = require('./routes/memories');
 
 console.log(indexRouter);
 
@@ -22,8 +24,8 @@ app.use(express.urlencoded( {extended: false }));
 app.use(express.static('public'));
 
 app.use('/', indexRouter);
-
-
+app.use('/championships', championshipsRouter);
+app.use('/memories', memoriesRouter);
 
 
 app.listen(port, function(){
