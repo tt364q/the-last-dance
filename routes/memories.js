@@ -1,17 +1,13 @@
 const express = require('express');
-
 const router = express.Router();
-
-
 const memoriesCtrl = require('../controllers/memories');
 
 //define our routes
-// get championships index view -> show me all championships
+
 router.get('/', memoriesCtrl.index);
-
-router.get('/memories', memoriesCtrl.memories);
-
-router.post('/', memoriesCtrl.create);
+// router.get('/memories', memoriesCtrl.memories);
+router.post('/create', memoriesCtrl.create);
+router.post('/:id/update', memoriesCtrl.update);
 
 
 //exprot the router object)

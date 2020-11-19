@@ -1,19 +1,58 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Favorite MJ Memory and Shoe</title>
+</head>
+<body>
+    <h1>Favorite MJ Memory </h1>
+    <a href="/championships">Championships</a>
+    <a href="/">Homepage</a>
+
+    <form action="/memories" method="POST">
+        <label>Favorite Memory
+            <input type="text" name="title">
+        </label>
+        
+    </form>
+</body>
+</html> -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
     <title>Favorite MJ Memory and Shoe</title>
 </head>
 <body>
-    <h1>Favorite MJ Memory and Shoe? </h1>
+    <h1>Favorite MJ Memory </h1>
     <a href="/championships">Championships</a>
     <a href="/">Homepage</a>
 
-    <form action="/memories" method="POST">
-        <input type="text" name="title">
-        <input type="submit" value="Memory">
-        <textarea name="" id="" cols="30" rows="10"></textarea>
+    <form action="/memories/create" method="POST">
+        <label>
+            <label>
+            <input type="text" name="title">
+           
+        </label>
+        <input type="submit" value="Favorite Memory" onclick="console.log('boom')">
     </form>
+    <div>
+        <% memories.forEach(function(memory){ %>
+        <li>
+            <%= memory.title %>
+            <!-- <%= memory.id %> -->
+            <form action="/memories/:id/update" method="POST">
+                <input type="text" name="title">
+                <input type="submit" value="edit">
+                <!-- <input type="hidden" value="<%= memory.id %>"> -->
+            </form>
+        </li>    
+            
+        <% }); %>
+    </div>
 </body>
 </html>
