@@ -17,6 +17,7 @@ This app shows the user all of Michael Jordans championships and allows the user
 
 ## Heroku Deploy Link
 
+https://the-last-dance.herokuapp.com/
 
 ## Icebox
 
