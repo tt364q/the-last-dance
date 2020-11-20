@@ -2,7 +2,17 @@
 
 
 
-
+## Technologies Used 
+- HTML5
+- CSS3
+- Javascript
+- Node.js
+- Mongoose.js
+- MongoDB
+- Express.js
+- Morgan
+- EJS
+- heroku
 
 
 
