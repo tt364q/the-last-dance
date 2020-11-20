@@ -19,11 +19,12 @@ This app shows the user all of Michael Jordans championships and allows the user
 
 https://the-last-dance.herokuapp.com/
 
-## Icebox
+## Future Enhancements
 
 -Add Authentication 
 -Mobile Support
 -Add videos of MJ Finals performances
+- Show pictures of shoes
 
 
 
