@@ -17,9 +17,9 @@ This app shows the user all of Michael Jordans championships and allows the user
 
 ## Icebox
 
-Add Authentication 
-Mobile Support
-Add videos of MJ Finals performances
+-Add Authentication 
+-Mobile Support
+-Add videos of MJ Finals performances
 
 
 
