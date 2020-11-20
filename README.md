@@ -15,7 +15,11 @@ This app shows the user all of Michael Jordans championships and allows the user
 - EJS
 - heroku
 
+## Icebox
 
+Add Authentication 
+Mobile Support
+Add videos of MJ Finals performances
 
 
 
