@@ -1,24 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
-    <title>Favorite MJ Memory and Shoe</title>
-</head>
-<body>
-    <h1>Favorite MJ Memory </h1>
-    <a href="/championships">Championships</a>
-    <a href="/">Homepage</a>
-
-    <form action="/memories" method="POST">
-        <label>Favorite Memory
-            <input type="text" name="title">
-        </label>
-        
-    </form>
-</body>
-</html> -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,19 +17,20 @@
             <input type="text" name="title">
            
         </label>
-        <input type="submit" value="Favorite Memory" onclick="console.log('boom')">
+        <input type="submit" value="Favorite Memory">
     </form>
-    <div>
+    <div class="memories-container">
         <% memories.forEach(function(memory){ %>
-        <li>
-            <%= memory.title %>
-            <!-- <%= memory.id %> -->
-            <form action="/memories/:id/update" method="POST">
+        <div class="memory-item">
+           <p><%= memory.title %></p>
+            <form action="/memories/<%= memory.id %>/update" method="POST">
                 <input type="text" name="title">
                 <input type="submit" value="edit">
-                <!-- <input type="hidden" value="<%= memory.id %>"> -->
             </form>
-        </li>    
+            <form action="/memories/<%= memory.id %>/delete" method="POST">
+                <input type="submit" value="delete">
+            </form>
+        </div>    
             
         <% }); %>
     </div>

@@ -1,0 +1,10 @@
+.memories-container {
+    width: 100%;
+    border: 1px solid red;
+}
+
+.memory-item {
+    display: flex;
+    align-items: center;
+    
+}

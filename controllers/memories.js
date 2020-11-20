@@ -1,14 +1,7 @@
 const Memory = require ('../models/memory');
 
 
-
-function memories(req, res) {
-    console.log("hello memories")
-    res.render('/memories');
-}
-
 function index(req, res){
-    console.log("hello Index")
     Memory.find({}, function(err, memories){
         res.render('memories/index', { memories })
     });
@@ -20,16 +13,27 @@ function create(req, res){
     });
 }
 function update(req, res){
-    // console.log("***D*D****", req)
-    Memory.findOneAndUpdate(req.params, req.body, function(err, memory){
-        console.log("*******", err)
-        res.redirect('/memories')
-    });
+    Memory.findByIdAndUpdate(req.params.id, req.body, function(err, memory){
+        if (err) {
+         console.log(err);
+        } else {
+          res.redirect('/memories');
+        }
+     })
 }
 
+function remove(req, res){
+    Memory.findByIdAndRemove(req.params.id, function(err, memory){
+        if (err) {
+         console.log(err);
+        } else {
+          res.redirect('/memories');
+        }
+     })
+}
 module.exports = {
     create,
-    memories,
     index,
-    update
-};
+    update,
+    remove
+}
