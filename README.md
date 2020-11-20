@@ -1,5 +1,6 @@
 ## the-last-dance
 
+This app shows the user all of Michael Jordans championships and allows the user to upload their favorite memories.
 
 
 ## Technologies Used 
