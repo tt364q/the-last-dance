@@ -1,10 +1,43 @@
-.memories-container {
+/* .memories-container {
     width: 100%;
     border: 1px solid red;
-}
+} */
 
 .memory-item {
     display: flex;
     align-items: center;
-    
+
+}
+
+h1 {
+    color: red;
+    font-family: Helvetica;
+    font-size: 100px;
+    justify-content: center;
+    text-align: center;
+}
+
+a {
+    color: red;
+    background-color: whitesmoke;
+    font-size: 30px;
+    justify-content: center;
+    text-align: center;
+}
+
+/* body {
+    background-image: url('../public/imgs/Rings.jpeg');
+} */
+
+.rings {
+    height: 900px;
+}
+
+.champs {
+    font-family: sans-serif;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    justify-content: center;
+    text-align: center;
 }

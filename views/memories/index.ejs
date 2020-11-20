@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="/css/style.css">
     <title>Favorite MJ Memory and Shoe</title>
 </head>
-<body>
+<body class="champs">
     <h1>Favorite MJ Memory </h1>
     <a href="/championships">Championships</a>
     <a href="/">Homepage</a>
@@ -19,7 +19,7 @@
         </label>
         <input type="submit" value="Favorite Memory">
     </form>
-    <div class="memories-container">
+    <div class="memories-container" class="champs">
         <% memories.forEach(function(memory){ %>
         <div class="memory-item">
            <p><%= memory.title %></p>
